@@ -1,0 +1,253 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playpen+Sans:wght@100..800&family=Sofadi+One&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%); 
+    height: 100vh;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    
+}
+
+body::before {
+    background-image: url("img/fondo.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.container {
+    width:55%;
+    height: 70%;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    background-image: url("img/Ruido.png");
+    background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.container__contenido {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.container__informacion {
+    width: 100%;
+}
+
+h1 {
+    font-family: "Caveat", cursive;
+    font-size: 62px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    padding: 2rem;
+    padding-top: 0;
+    text-align: center;
+}
+
+.container__texto {
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container__campo {
+    display: flex;
+    align-items: center;  
+    margin-bottom: 12px;
+    margin: 30px;
+    gap: 1rem;  
+}
+
+.texto__parrafo {
+    color: #FFF;
+    font-family: "Sofadi One", system-ui;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10px;  
+}
+
+.container__input {
+    width: 128px;
+    height: 50px;
+    padding: 0 10px !important;
+    border-radius: 13px;
+    background-color: #FFF;
+    border: none;
+    color: #535353;
+    padding: 2rem;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Sofadi One", system-ui;
+    
+}
+
+.container__input:disabled{
+    opacity: 0.5;
+}
+
+.boton{
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    background-color: #1875E8;
+    border-radius: 16px;
+    width: 150px;
+    height: 50px;
+    box-shadow: 0px 0px 20px 0px rgba(69, 54, 75, 0.5);
+    cursor: pointer;
+    font-family: "Sofadi One", system-ui;
+}
+
+.boton:disabled{
+    opacity: 0.5;
+    cursor: default;
+}
+
+.container__contrasena {
+    width: 420px;
+    height: 52px;
+    padding: 0 20px ;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #1875E8;
+    margin: 0px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.container__contrasena:hover{
+    border: none;
+}
+
+.container__contrasena::placeholder {
+    font-family: "Sofadi One", system-ui;
+}
+
+.seguridad_contrasena {
+    font-family: "Sofadi One", system-ui;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container_seguridad {
+    text-align: center;
+}
+
+.animate__animated.animate__fadeInRight{
+    animation: fadeInFromRight 2s ease-in-out;
+}
+
+@keyframes fadeInFromRight {
+    0% {
+      transform: translateX(200px); 
+      opacity: 0; 
+    }
+    100% {
+      transform: translateX(0); 
+      opacity: 1; 
+    }
+}
+
+#alerta{
+    border-radius: 6px;
+    text-align: center;
+    padding-top:10px;
+    width: 45rem;
+    height: 3rem;
+    color: white;
+    position: fixed;
+    top: 88%;
+    bottom: 1rem; 
+    right: 5rem; 
+    font-family: "Sofadi One", system-ui;
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+    body::before{
+        background-position: center;
+    }
+    .container{
+    width: 100%;
+    height: auto;
+    margin: 20px;
+   }
+   h1{
+    font-size: 2rem;
+   }
+   .container__campo{
+    flex-direction: column;
+   }
+   .texto__parrafo{
+    font-size: 2rem;
+   }
+   .container__contrasena{
+    width: 100%;
+   }
+   #alerta{
+    bottom: 1rem;
+    right: 0.5rem;
+    width: auto;
+    height: 4.5rem;
+    font-size: 1.6rem;
+   }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body::before{
+        background-position: center;
+    }
+    .container{
+        width: 90%;
+    }
+
+    .container__contrasena {
+        font-size: 22px;
+    }
+
+    #alerta{
+        bottom: 1rem;
+        right: 2rem;
+        padding: 10px 10px;
+        width: auto;
+        height: 3rem;
+        font-size: 1.6rem;
+       }
+}
+
+@media only screen and (min-width: 1025px) {
+    body::before{
+        background-position: center;
+    }
+}
+
+

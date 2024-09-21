@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Generador de contraseñas</title>
+    
+</head>
+<body>
+    <main class="container">
+        <div class="container__contenido">
+            <div class="container__informacion">
+                <div class="container__texto">
+                    <h1>Generador de Contraseñas</span></h1>
+                    <div class="container__campo"> 
+                        <label class="texto__parrafo">Cantidad de caracteres :
+                            <input class="container__input" type="number" id="cantidad" >
+                            <button class="boton" id="generar" onclick="generate()" >Generar</button>
+                        </label>                        
+                    </div> 
+                    <div class="container__campo">
+                        <input class="container__contrasena" type="text" id="contrasena" placeholder="contraseña" readonly>
+                        <button class="boton" id="generar" onclick="copyText()" >Copiar</button>
+                        <button class="boton" id="limpiar" onclick="clean()" >Limpiar</button>
+                    </div>
+                    <div class="container_seguridad">
+                        <label class="seguridad_contrasena" id="texto"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="animate__animated animate__fadeInRight alerta_seguridad" id="alerta">
+        <p></p>
+    </div>
+    <script src="main.js"></script> 
+</body>
+</html>
