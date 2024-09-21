@@ -30,12 +30,14 @@ function generate()
     if(numberEntered < 6)
     {
         displayMessage("La cantidad de caracteres debe ser mayor a 6");
+        alert.style.height = "4rem";
         disabledbuttons();
         clean();
         return;   
     }
     else if(numberEntered > 20){
         displayMessage("La cantidad de caracteres no puede ser mayor a 20");
+        alert.style.height = "4rem";
         disabledbuttons();
         clean();
         return;   
